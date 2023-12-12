@@ -40,7 +40,6 @@ const usePasswordValidation = (password: string) => {
       return;
     }
 
-    // if all checks pass, set valid to true
     setValid(true);
     setErrorMessage("");
   }, [password]);

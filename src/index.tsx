@@ -1,8 +1,7 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import "./styles.css";
 
-import usePasswordValidation from "./usePasswordValidation";
+import usePasswordValidation from "./hooks/usePasswordValidation";
 
 function PasswordEntryForm() {
   const [password, setPassword] = useState("");
@@ -40,7 +39,8 @@ function PasswordEntryForm() {
   return (
     <form className="formWrapper" onSubmit={checkValidation}>
       <input
-        type="text"
+        type="password"
+        id="password"
         value={password}
         placeholder="Enter your password"
         onChange={handleInputChange}
@@ -52,7 +52,8 @@ function PasswordEntryForm() {
         }
       />
       <input
-        type="text"
+        type="password"
+        id="confirmPassword"
         value={confirmPassword}
         placeholder="Confirm your password"
         onChange={handleConfirmChange}
